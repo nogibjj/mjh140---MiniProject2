@@ -27,8 +27,6 @@ jobs:
       - name: Install
         run: |
           make install
-        env: |
-          NODE_VERSION: 16 
 
       - name: Format
         run: |
