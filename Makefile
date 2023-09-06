@@ -13,6 +13,7 @@ all: venv install test format lint
 #Activate VENV
 venv:
 	python3 -m venv $(VENV)
+	python -m ensurepip --upgrade
 
 #Install requirements using VENV
 install:
