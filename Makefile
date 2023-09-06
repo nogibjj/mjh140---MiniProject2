@@ -16,7 +16,8 @@ venv:
 
 #Install requirements using VENV
 install:
-	$(PIP) install -r requirements.txt
+# $(PIP) install -r requirements.txt
+	venv/bin/pip install -r requirements.txt
 
 #Format using black
 format: install
