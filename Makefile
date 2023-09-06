@@ -31,10 +31,10 @@ lint: format
 test: lint
 	$(PYTEST) tests/
 
-# Clean __pycache__ and remove venv
-clean: test
- 	rm -rf __pycache__
- 	rm -rf $(VENV)
+#Clean __pycache__ and remove venv
+#clean: test
+#	rm -rf __pycache__
+#	rm -rf $(VENV)
 
 
 
