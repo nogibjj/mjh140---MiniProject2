@@ -1,8 +1,8 @@
 #Variables:
 VENV := venv
 PYTHON := $(VENV)/bin/python3
-PIP := $(VENV)/bin/pip
-BLACK := $(VENV)/bin/black
+PIP := pip
+BLACK := black
 PYLINT := $(VENV)/bin/pylint
 PYTEST := $(VENV)/bin/pytest
 
@@ -17,7 +17,7 @@ venv:
 
 #Install requirements using VENV
 install:
-	pip install -r requirements.txt
+	$(PIP) install -r requirements.txt
 
 #Format using black
 format: install
