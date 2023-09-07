@@ -30,7 +30,7 @@ lint: format
 
 #Perform unit tests under tests/ directory
 test: lint
-	$(PYTEST) test_redir.py
+	$(PYTEST) tests/
 
 #Clean __pycache__ and remove venv
 clean: test
