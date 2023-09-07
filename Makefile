@@ -1,10 +1,10 @@
 #Variables:
 VENV := venv
 PYTHON := $(VENV)/bin/python3
-PIP := pip
-BLACK := black
-PYLINT := pylint
-PYTEST := pytest
+PIP := $(VENV)/bin/pip
+BLACK := $(VENV)/bin/black
+PYLINT := $(VENV)/bin/pylint
+PYTEST := $(VENV)/bin/pytest
 
 .PHONY: all venv install format test clean
 
