@@ -36,8 +36,3 @@ test: lint
 clean: test
 	rm -rf __pycache__
 	rm -rf $(VENV)
-
-
-
-
-
