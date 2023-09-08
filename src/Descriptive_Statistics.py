@@ -1,7 +1,7 @@
+'''Returns pandas descriptive statistics.'''
+
 import os
 import pandas as pd
-
-'''Returns pandas descriptive statistics.'''
 
 def describe_data(file_name: str):
     '''Takes file name and returns pandas descriptive statistics.'''
