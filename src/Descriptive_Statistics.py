@@ -1,9 +1,11 @@
-import pandas as pd
-import numpy as np
 import os
-import sys
+import pandas as pd
+
+'''Returns pandas descriptive statistics.'''
 
 def describe_data(file_name: str):
+    '''Takes file name and returns pandas descriptive statistics.'''
+
     if not isinstance(file_name, str):
         raise TypeError("file_name must be a string")
     
@@ -13,12 +15,10 @@ def describe_data(file_name: str):
     file_path = os.path.join(new_path, file_name)
 
     try:
-        df = pd.read_csv(file_path)
-        return df.describe()
+        data_df = pd.read_csv(file_path)
+        return data_df.describe()
     except FileNotFoundError:
         return print(f"The file ({file_name}) was not found.")
-    except Exception as e:
-        return print(f"An exception of type {type(e).__name__} occurred: {e}")
     
 if __name__ == "__main__":
     describe_data("testdata.csv")
