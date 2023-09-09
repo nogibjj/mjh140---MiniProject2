@@ -1,4 +1,4 @@
-'''Print Module'''
+'''TEMPLATE: Print Module'''
 
 def printfunc(newstr : str) -> str:
     '''Print function.'''
