@@ -16,6 +16,8 @@ class TestImportDataFunction(unittest.TestCase):
             dd("testdata.csv")
         except TypeError:
             self.fail("TypeError raised for correct data type")
+        except FileNotFoundError:
+            self.fail("File was not found.")
 
     def test_incorrect_data_type(self):
         # This should raise a TypeError
