@@ -17,7 +17,7 @@ def describe_data(file_name: str):
     try:
         data_df = pd.read_csv(file_path)
         return data_df.describe()
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         raise FileNotFoundError(f"The file ({file_name}) was not found.")
     
 if __name__ == "__main__":
