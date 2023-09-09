@@ -18,7 +18,7 @@ def describe_data(file_name: str):
         data_df = pd.read_csv(file_path)
         return data_df.describe()
     except FileNotFoundError as exc:
-        raise FileNotFoundError(f"The file ({file_name}) was not found. Error: {exc}")
+        raise FileNotFoundError(f"The file ({file_name}) was not found.") from exc
     
 if __name__ == "__main__":
     describe_data("fake_data.csv")
