@@ -11,7 +11,7 @@ def describe_data(file_name: str):
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
-    new_path = parent_dir + "\\data"
+    new_path = parent_dir + "/data"
     file_path = os.path.join(new_path, file_name)
 
     try:
@@ -21,4 +21,4 @@ def describe_data(file_name: str):
         raise FileNotFoundError(f"The file ({file_name}) was not found.") from exc
     
 if __name__ == "__main__":
-    describe_data("fake_data.csv")
+    describe_data("testdata.csv")
