@@ -2,9 +2,11 @@
 
 import os
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-def describe_data(file_name: str):
-    '''Takes file name and returns pandas descriptive statistics.'''
+def import_iris(file_name: str):
+    '''Converts csv file to dataframe'''
 
     if not isinstance(file_name, str):
         raise TypeError("file_name must be a string")
@@ -15,11 +17,29 @@ def describe_data(file_name: str):
     file_path = os.path.join(new_path, file_name)
 
     try:
-        data_df = pd.read_csv(file_path)
-        return data_df.describe()
+        iris_df = pd.read_csv(file_path)
+        cols = set(iris_df.columns) - {'Id'}
+        reduced_iris = iris_df[list(cols)]
+        return reduced_iris
     except FileNotFoundError as exc:
         raise FileNotFoundError(f"The file ({file_name}) was not found.") from exc
+
+def describe_iris(iris_df):
+    '''Returns pandas descriptive statistics on dataframe.'''
+
+    if not isinstance(iris_df, pd.DataFrame):
+        raise TypeError("Iris data must be in pandas dataframe form")
     
+    return iris_df.describe()
+
+def visualize_iris(iris_df):
+    plt.figure(figsize=(10, 6))
+    sns.violinplot(x="Species", y="PetalLengthCm", data=iris_df)
+    plt.title("Violin Plot of Petal Length by Species")
+    plt.show()
+
     
 if __name__ == "__main__":
-    print(describe_data("iris.csv"))
+    iris_df = import_iris("iris_data.csv")
+    print(describe_iris(iris_df))
+    visualize_iris(iris_df)
