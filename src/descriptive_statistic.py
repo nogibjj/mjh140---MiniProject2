@@ -20,5 +20,6 @@ def describe_data(file_name: str):
     except FileNotFoundError as exc:
         raise FileNotFoundError(f"The file ({file_name}) was not found.") from exc
     
+    
 if __name__ == "__main__":
-    describe_data("testdata.csv")
+    print(describe_data("iris.csv"))
