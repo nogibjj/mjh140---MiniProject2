@@ -13,7 +13,7 @@ class TestImportDataFunction(unittest.TestCase):
     def test_correct_data_type(self):
         # This should not raise an error
         try:
-            dd("iris.csv")
+            dd("iris_data.csv")
         except TypeError:
             self.fail("TypeError raised for correct data type")
         except FileNotFoundError:
