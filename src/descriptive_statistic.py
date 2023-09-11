@@ -39,6 +39,8 @@ def visualize_iris(iris_df):
     plt.title("Violin Plot of Petal Length by Species")
     plt.show()
 
+    plt.savefig("PetalLength_by_Species.png")
+
     
 if __name__ == "__main__":
     iris_data = import_iris("iris_data.csv")
