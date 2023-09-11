@@ -37,7 +37,6 @@ def visualize_iris(iris_df):
     plt.figure(figsize=(10, 6))
     sns.violinplot(x="Species", y="PetalLengthCm", data=iris_df)
     plt.title("Violin Plot of Petal Length by Species")
-    plt.show()
 
     plt.savefig("PetalLength_by_Species.png")
 
