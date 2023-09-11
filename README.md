@@ -3,7 +3,7 @@
 
 ## Summary:
 
-This project introduces the Pandas package for generating descriptive statistics on a generaic dataset. Matplotlib and Seaborn packages were also used to create a visualization of the dataset. The Iris Species dataset was used for this project. For more info on the Iris Species dataset, visit the following link:
+This project introduces the Pandas package for generating descriptive statistics on the Iris Species dataset. Matplotlib and Seaborn packages were used to create a boxplot visualization of Sepal Length by Species. For more info on the Iris Species dataset, visit the following link:
 
 https://www.kaggle.com/datasets/uciml/iris?resource=download
 
@@ -35,8 +35,8 @@ https://www.kaggle.com/datasets/uciml/iris?resource=download
 
 The following table of descriptive statistics was outputed from the `describe_iris` function within `src/descriptive_statistic.py`:
 
-|       | PetalLengthCm | PetalWidthCm | SepalWidthCm | SepalLengthCm |
-| --------------- | --------------- | --------------- | --------------- | --------------- |
+|          | PetalLengthCm | PetalWidthCm | SepalWidthCm | SepalLengthCm |
+| -------- | ------------- | ------------ | ------------ | ------------- |
 |count     |    150.00     |   150.00    |   150.00     |    150.00 |
 |mean      |      3.76     |     1.20    |     3.05     |      5.84 |
 |std       |      1.76     |     0.76    |     0.43     |      0.83 |
@@ -46,3 +46,7 @@ The following table of descriptive statistics was outputed from the `describe_ir
 |75%       |      5.10     |     1.80    |     3.30     |      6.40 |
 |max       |      6.90     |     2.50    |     4.40     |      7.90 |
 
+
+The following boxplot visualization for Sepal Length distribution by Species was created from the `visualize_iris` function within `src/descriptive_statistic.py`:
+
+<p align = "center"><img src = "https://github.com/nogibjj/mjh140---MiniProject2/blob/main/SepalLength_by_Species.png" width = 500px></p>
