@@ -33,6 +33,7 @@ def describe_iris(iris_df):
     return iris_df.describe()
 
 def visualize_iris(iris_df):
+    '''Plots Petal Length by Species'''
     plt.figure(figsize=(10, 6))
     sns.violinplot(x="Species", y="PetalLengthCm", data=iris_df)
     plt.title("Violin Plot of Petal Length by Species")
@@ -40,6 +41,6 @@ def visualize_iris(iris_df):
 
     
 if __name__ == "__main__":
-    iris_df = import_iris("iris_data.csv")
-    print(describe_iris(iris_df))
-    visualize_iris(iris_df)
+    iris_data = import_iris("iris_data.csv")
+    print(describe_iris(iris_data))
+    visualize_iris(iris_data)
