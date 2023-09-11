@@ -40,7 +40,7 @@ def visualize_iris(iris_df):
     '''Visualize sepal length distribution for each species.'''
 
     plt.figure(figsize=(10, 6))
-    sns.boxplot(x="species", y="sepal_length", data=iris_df)
+    sns.boxplot(x="Species", y="SepalLengthCm", data=iris_df)
     plt.title("Boxplot of Sepal Length by Species")
 
     plt.savefig("SepalLength_by_Species.png")
