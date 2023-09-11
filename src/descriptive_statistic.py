@@ -29,8 +29,12 @@ def describe_iris(iris_df):
 
     if not isinstance(iris_df, pd.DataFrame):
         raise TypeError("Iris data must be in pandas dataframe form")
-    
-    return iris_df.describe()
+    iris_stats = iris_df.describe().round(2)
+    # Calculate and add the median manually
+    median = iris_stats.median()
+    iris_stats.loc['50%'] = median
+    iris_stats = iris_stats.rename(index={'50%': 'median'})
+    return iris_stats
 
 def visualize_iris(iris_df):
     '''Plots Petal Length by Species'''
