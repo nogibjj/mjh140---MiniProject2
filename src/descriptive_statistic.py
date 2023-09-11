@@ -37,12 +37,13 @@ def describe_iris(iris_df):
     return iris_stats
 
 def visualize_iris(iris_df):
-    '''Plots Petal Length by Species'''
-    plt.figure(figsize=(10, 6))
-    sns.violinplot(x="Species", y="PetalLengthCm", data=iris_df)
-    plt.title("Violin Plot of Petal Length by Species")
+    '''Visualize sepal length distribution for each species.'''
 
-    plt.savefig("PetalLength_by_Species.png")
+    plt.figure(figsize=(10, 6))
+    sns.boxplot(x="species", y="sepal_length", data=iris_df)
+    plt.title("Boxplot of Sepal Length by Species")
+
+    plt.savefig("SepalLength_by_Species.png")
 
     
 if __name__ == "__main__":
