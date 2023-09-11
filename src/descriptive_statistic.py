@@ -1,4 +1,4 @@
-'''Returns pandas descriptive statistics.'''
+'''Returns descriptive statistics for the Iris dataset.'''
 
 import os
 import pandas as pd
